@@ -1,0 +1,117 @@
+#wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.container{
+    max-width:1170px;
+    width:100%;
+    margin: 0 auto;
+
+    &.lg {
+        max-width: 1310px;
+    }
+}
+
+.style{
+    position: relative;
+    padding-left:44px;
+    display: inline-block;
+    vertical-align: top;
+
+    &:after{
+        content:'';
+        width:42px;
+        height:42px;
+        position: absolute;
+        top:10px;
+        left:0;
+        background: url("../img/about-casino-logo.png") no-repeat center/cover;
+        display: block;
+    }
+}
+
+.bg-stretch{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.overline-text{
+    text-transform: uppercase;
+    font-size: 34px;
+}
+
+.btn {
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    &.secondary {
+        padding:15px 50px;
+        background-color: red;
+        color:white;
+        border-radius: 50px;
+    }
+    &.primary{
+        
+        padding:15px;
+        background-color: #333;
+        border: 2px solid white;
+        color:white;
+        min-width:230px;
+        border-radius: 30px;
+        @include animate(all, 0.3s, ease-in-out);
+        &:hover {
+            background-color: $white;
+            color: #333;
+            border-color: #333;
+        }
+    }
+    &.secondary{
+        padding:15px;
+        background-color: rgb(191,61,66);
+        border: 2px solid white;
+        color:white;
+        min-width:180px;
+        border-radius: 30px;  
+        @include animate(all, 0.3s, ease-in-out);
+        &:hover {
+            background-color: $white;
+            color: #333;
+            border-color: rgb(191,61,66);
+        }
+    }
+}
+
+.two-columns, .four-columns{
+    display: flex;
+    flex-wrap:wrap;
+    margin:0 -20px;
+    .col{
+        flex: 1;
+        padding: 0 20px;
+    }
+}
+
+.four-columns {
+    margin: 0 -10px; 
+    .col {
+        // flex: 1;
+        // width: auto;
+        padding: 0 10px;
+    }
+}
+
+// .two-columns{
+//     .col{
+//         width:50%;
+//         padding: 0 20px;
+//     }
+// } 
+

@@ -1,0 +1,232 @@
+.banner-part{
+    /* height: 100vh; */
+    position: relative;
+    background: url('../img/banner-img.png') no-repeat center /cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before{
+        content:'';
+        height:100vh;
+       
+    }
+    &:after {
+        content: '';
+        background-color: rgba(191,61,66,1);
+        mix-blend-mode: darken;
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        
+    }
+}
+.banner-content{
+    max-width:976px;
+    color:white;
+    position:relative;
+    z-index:9;
+    text-align: center;
+
+    p{
+        margin:0;
+    }
+}
+
+
+.about-part{
+    padding:120px 0;
+    .image-wrap{
+        position: relative;
+        /* dont use height and width  */
+        /* width:500px;
+        height:345px; */
+        padding-top:69%; /* 345(height)/500(width) = 0.69 and then fix 
+        padding top to make height 345 px*/
+        border-radius: 25px;
+        overflow: hidden;
+    
+    }
+    p{
+        margin:0;
+    }
+    .btn-wrap{
+        margin-top:60px;
+    }
+} 
+
+
+.products-part {
+    text-align: center;
+    h2 {
+        line-height: 1;
+        margin-bottom: 17px;
+    }
+    .style::after {
+        top: -6px;
+    }
+    .four-columns {
+        padding: 45px 0; 
+    }
+    p {
+        margin: 0 0 15px;
+    }
+    .product-detail {
+        background-color: #121212;
+        border-radius: 23px;
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        h3 {
+            margin-top: -5px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+    }
+    .button-wrap {
+        padding: 15px 0; 
+        .btn{
+            &.primary {
+                border: 2px solid red; 
+                background-color: #121212;
+
+                &:hover {
+                    background-color: $white;
+                    color: #333;
+                    border-color: #333;
+                }
+            }
+        }
+    }
+    .col {
+        .product-image{
+            height: 400px;
+            position: relative;
+        }
+        &:nth-child(2) {
+            .product-image {
+                height: 305px;
+            }
+        }
+        &:nth-child(3) {
+            .product-image {
+                height: 250px;
+            }
+        }
+        &:last-child {
+            .product-image {
+                height: 180px;
+            }
+        }
+    }
+}
+
+// .products-part .col:nth-child(2) .product-image {
+//     height: 305px;
+// }
+// .products-part .col:nth-child(3) .product-image {
+//     height: 250px;
+// }
+// .products-part .col:last-child .product-image {
+//     height: 180px;
+// }
+
+.product-content {
+    padding: 0 20px 30px;
+    line-height: 1.57;
+    font-size: 14px;
+}
+.product-code {
+    @include size(62px);
+    border-radius: 50%; 
+    border: 2px solid #b03d42;
+    background-color: #191919;
+    font-size: 25px;
+    line-height: 62px;
+    text-align: center;
+    margin: -30px auto 13px;
+    position: relative;
+    z-index: 9;
+}
+
+
+// .product-detail h3 {
+//     margin-top: -5px;
+//     margin-bottom: 20px;
+// }
+// .products-part .button-wrap {
+//     padding: 15px 0; 
+// }
+// .button-wrap .btn.primary {
+//     border: 2px solid red; 
+//     background-color: #121212;
+// }
+.casino-play-part {
+    text-align: center;
+    background-color: $dark-black;
+    color: $white;
+    padding: 100px 0;
+    .container {
+        max-width: 1007px;
+    }
+    h2 {
+        color: $white;
+        margin-bottom: 30px;
+    }
+    .heading-wrap {
+        max-width: 940px; 
+        margin: 0 auto 85px;
+    }
+    .icon-wrap{
+        border: 1px solid $white;
+        border-radius: 20px;
+        height: 148px;
+        margin-bottom: 22px;
+        @include flex(wrap, center, center);
+        // display: grid;
+        // place-items: center;
+    }
+    .button-wrap{
+        padding-top: 80px;
+    }
+    .process-text {
+        
+        @include align-vertical(top);
+        font-size: 20px;
+    }
+    .four-columns {
+        margin: 0 -32px;
+        .col{
+            padding: 0 31px; 
+        }
+    }
+}
+.feedback-part {
+    padding: 100px 0; 
+    text-align: center;
+    .feedback-img {
+        @include size(158px);
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid $red;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }   
+    }
+    cite {
+        display: block;
+        font-size: 19px; 
+        line-height: 1.57;
+        font-style: normal;
+        text-transform: capitalize;
+    }
+    q{
+        quotes: none;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
